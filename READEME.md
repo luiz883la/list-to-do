@@ -1,0 +1,1 @@
+Este site foi feito resentemente, com estruturas atalizadas e funcoes mais elaboradas e praticas no css, novos comandos em javascript e um estilo mais moderno, e uum site simples mas feito de coracao, ponho tudo que aprendo nos sites

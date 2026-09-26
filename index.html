@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="cabeca">
+      <div class="menu_del">
+        
+        <picture>
+          <source media="(prefers-color-scheme: dark )" srcset="midia/deletar.png" type="image/png">
+          <img src="midia/deletar-light.png" class="button_deletar" />
+        </picture>
+      </div>
+      
+      <img src="midia/search-ico.png" alt="pesquisar" class="ico">
+      <input type="text" class="pesquisa" placeholder="search works" />
+      <picture>
+          <source media="(prefers-color-scheme: dark )" srcset="midia/add.png" type="image/png">
+      <img src="midia/add-light.png" class="button_add" />
+      </picture>
+    </header>
+    <main class="lista"></main>
+    <nav class="additem">
+      <img src="midia/back.png" class="back">
+      <input type="text" class="textoV" placeholder="digite seu dever" />
+      <input type="date" class="dataV" onkeydown="return false;" />
+      <p>
+        <input type="checkbox" class="PtempoV" /> Você ira precisar de horario?
+      </p>
+      <input type="time" class="tempoV" />
+      <input type="button" value="Concluir" class="concluir" />
+    </nav>
+    <script src="script.js"></script>
+  </body>
+</html>
