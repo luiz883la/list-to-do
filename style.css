@@ -43,6 +43,7 @@ body {
 
 .cabeca {
   display: flex;
+  justify-content: space-between;
   padding: 5px;
   margin: 0;
   background-color: var(--pages-color);
