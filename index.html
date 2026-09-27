@@ -9,20 +9,25 @@
   <body>
     <header class="cabeca">
       <div class="menu_del">
-        
-        <picture>
-          <source media="(prefers-color-scheme: dark )" srcset="midia/deletar.png" type="image/png">
-          <img src="midia/deletar-light.png" class="button_deletar" />
-        </picture>
+      <img src="midia/deletar.png" class="ico dark">
       </div>
-      
-      <img src="midia/search-ico.png" alt="pesquisar" class="ico">
-      <input type="text" class="pesquisa" placeholder="search works" />
-      <picture>
-          <source media="(prefers-color-scheme: dark )" srcset="midia/add.png" type="image/png">
-      <img src="midia/add-light.png" class="button_add" />
-      </picture>
+      <img src="midia/search-dark.png" class="ico  search">
+      <input type="text" class="pesquisa" placeholder="search works" class="pesquisa"/>
+
+      <img src="midia/add-dark.png" class="ico  button_add">
+      <img src="midia/setting-mode-light.png" class="ico button-color-mode">
     </header>
+    <div class="menu-color-mode">
+      <p class="dark">dark mode 
+        <img src="midia/dark-mode-light.png" class="ico  mode-style ico01">
+      </p>
+      <p class="light">light mode 
+        <img src="midia/light-mode-light.png" class="ico  mode-style ico02">
+      </p>
+      <p class="sistem">sistem mode 
+        <img src="midia/sistem-mode-light.png" class="ico  mode-style ico03">
+      </p>
+    </div>
     <main class="lista"></main>
     <nav class="additem">
       <img src="midia/back.png" class="back">

@@ -3,21 +3,21 @@
   --text-color: #333333;
   --pages-color: #f2f2f2;
   --buttons-color: #e9e6e6;
-  color-scheme: light; /* Informa o padrão nativo do navegador */
+  color-scheme: light;
 }
 
-.dark {
+body.dark {
   --bg-color: #121212;
   --text-color: #f0f0f0;
-  --pages-color: #0d0d0d;
+  --pages-color: #252424;
   --buttons-color:  #323232;
   color-scheme: dark;
 }
 
-/* Modo claro forçado por classe */
-.light {
+body.light {
   --bg-color: #ffffff;
   --text-color: #333333;
+  --buttons-color:  #d4d2d2;
   --pages-color: #f2f2f2;
   color-scheme: light;
 }
@@ -49,6 +49,49 @@ body {
   border: solid 2px var(--buttons-color);
   margin-bottom: 30px;
 }
+.button-color-mode{
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  border-radius: 50%;
+}
+.button-color-mode:hover{
+  background: rgba(2, 2, 2, 0.082);
+  transition: background-color 0.1s, color 0.1s;
+}
+
+
+.menu-color-mode{
+  background-color: var(--pages-color);
+  border: solid 2px var(--buttons-color);
+  width: 20%;
+  text-align: left;
+  padding: 10px;
+  position: fixed;
+  z-index: 999;
+  top: 50px;
+  right: 10px;
+  display: none;
+}
+
+.menu-color-mode p {
+  cursor: pointer;
+  font-size: 1.1em;
+  height: 30px;
+}
+
+.menu-color-mode p:hover{
+  background-color: var(--buttons-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.mode-style{
+  position: absolute;
+  right: 10px;
+  width: 20%;
+}
 
 div.cabeca > p {
   padding-left: 10px;
@@ -57,11 +100,11 @@ div.cabeca > p {
   padding-bottom: 10px;
 }
 
-.ico{
-  justify-self: center;
-  align-self: center;
-  width: 30px;
-  height: 30px;
+.search{
+  position: relative;
+  top: 10px;
+  width: 40px;
+  height: 40px;
 }
 
 input.pesquisa {
@@ -72,20 +115,18 @@ input.pesquisa {
   border: 0;
 }
 
-img.button_add {
-  position: absolute;
-  right: 10px;
+.button_add {
   margin-left: 10px;
   cursor: pointer;
   font: normal 2.7em arial;
   border: 0;
-  background-color:var(--buttons-color);
   height: 50px;
+  width: auto;
   text-align: left;
   border-radius: 50%;
 }
 
-img.button_add:hover {
+img.button_add:hover{
   background: rgba(2, 2, 2, 0.082);
   transition: background-color 0.1s, color 0.1s;
 }
@@ -97,6 +138,16 @@ h1 {
   background-color: white;
   height: 50px;
   width: 350px;
+}
+
+/* Modo claro */
+body.light .dark {
+  display: block;
+}
+
+/* Modo escuro */
+body.dark .light {
+  display: block;
 }
 
 .lista {
@@ -124,6 +175,7 @@ h1 {
   padding: 10px;
   border-radius: 20px;
   background-color: var(--pages-color);
+  border: solid 2px var(--buttons-color);
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
   animation: surgir 0.3s ease-out forwards;
@@ -170,7 +222,7 @@ input.tempoV {
 }
 
 .back{
-  width: 5%;
+  width: 50px;
   height: auto;
   border-radius: 50%;
   cursor: pointer;
