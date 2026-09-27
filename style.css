@@ -43,7 +43,6 @@ body {
 
 .cabeca {
   display: flex;
-  justify-content: space-between;
   padding: 5px;
   margin: 0;
   background-color: var(--pages-color);
@@ -74,6 +73,8 @@ input.pesquisa {
 }
 
 img.button_add {
+  position: absolute;
+  right: 10px;
   margin-left: 10px;
   cursor: pointer;
   font: normal 2.7em arial;
