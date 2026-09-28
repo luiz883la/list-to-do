@@ -6,7 +6,7 @@
   color-scheme: light;
 }
 
-body.dark {
+.dark {
   --bg-color: #121212;
   --text-color: #f0f0f0;
   --pages-color: #252424;
@@ -14,7 +14,7 @@ body.dark {
   color-scheme: dark;
 }
 
-body.light {
+.light {
   --bg-color: #ffffff;
   --text-color: #333333;
   --buttons-color:  #d4d2d2;

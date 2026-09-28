@@ -30,6 +30,7 @@ const ico01 = document.querySelector(".ico01");
 const ico02 = document.querySelector(".ico02");
 const ico03 = document.querySelector(".ico03");
 
+const estilo = getComputedStyle(document.body);
 // Event Listeners
 concluir.addEventListener("click", verificarcaixa);
 fechar.addEventListener("click", fecharadd);
@@ -52,8 +53,10 @@ permitirHorario.addEventListener("click", verificar);
 
 dark_mode.addEventListener("click", () => {
   localStorage.setItem("color-mode", "dark");
+  document.body.classList.remove("sistem");
   document.body.classList.remove("light");
-  document.body.classList.remove("dark");
+  document.body.classList.add("dark");
+  atualizar()
 });
 
 light_mode.addEventListener("click", () => {
@@ -78,27 +81,29 @@ if(localStorage.getItem("color-mode")){
 }
 let lista = JSON.parse(localStorage.getItem("lista")) || {};
 let selecionado = [];
-
 verificar();
 adicionaritens();
 
 function atualizar(){
-  if(localStorage.getItem("color-mode") == "light"){
-  button_add.src = "midia/add-dark.png"
-  search.src = "midia/search-dark.png"
-  button_color_mode.src = "midia/setting-mode-dark.png"
-  ico01.src = "midia/dark-mode.png"
-  ico02.src = "midia/light-mode.png"
-  ico03.src = "midia/sistem-mode.png"
-}else{
-  button_add.src = "midia/add-light.png"
-  button_color_mode.src = "midia/setting-mode-light.png"
-  search.src = "midia/search-light.png"
-  ico01.src = "midia/dark-mode-light.png"
-  ico02.src = "midia/light-mode-light.png"
-  ico03.src = "midia/sistem-mode-light.png"
-
-}
+  if(localStorage.getItem("color-mode") == "light" || estilo.getPropertyValue("--bg-color").trim() == "#ffffff"){
+    button_add.src = "midia/add-dark.png"
+    search.src = "midia/search-dark.png"
+    button_color_mode.src = "midia/setting-mode-dark.png"
+    ico01.src = "midia/dark-mode.png"
+    ico02.src = "midia/light-mode.png"
+    ico03.src = "midia/sistem-mode.png"
+    console.log("light")
+  }else if(localStorage.getItem("color-mode") == "dark" || estilo.getPropertyValue("--bg-color").trim() == "#121212"){
+    button_add.src = "midia/add-light.png"
+    button_color_mode.src = "midia/setting-mode-light.png"
+    search.src = "midia/search-light.png"
+    ico01.src = "midia/dark-mode-light.png"
+    ico02.src = "midia/light-mode-light.png"
+    ico03.src = "midia/sistem-mode-light.png"
+    console.log("dark")
+  }else{
+    console.log("error!")
+  }
 }
 
 function verificar() {
