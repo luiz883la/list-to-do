@@ -41,6 +41,14 @@ body {
   margin: 0;
 }
 
+body.light .dark {
+  display: block;
+}
+
+body.dark .light {
+  display: block;
+}
+
 .cabeca {
   display: flex;
   padding: 5px;
@@ -140,16 +148,6 @@ h1 {
   width: 350px;
 }
 
-/* Modo claro */
-body.light .dark {
-  display: block;
-}
-
-/* Modo escuro */
-body.dark .light {
-  display: block;
-}
-
 .lista {
   display: flex;
   flex-direction: column;
@@ -162,7 +160,6 @@ body.dark .light {
   transition: background-color 0.3s, color 0.3s;
   border-radius: 30px;
 }
-
 
 .additem {
   position: fixed;
