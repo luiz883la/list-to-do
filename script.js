@@ -86,13 +86,13 @@ function atualizar(){
   if(localStorage.getItem("color-mode") == "light"){
   button_add.src = "midia/add-dark.png"
   search.src = "midia/search-dark.png"
-  menu_mode.src = "midia/setting-mode-dark.png"
+  button_color_mode.src = "midia/setting-mode-dark.png"
   ico01.src = "midia/dark-mode.png"
   ico02.src = "midia/light-mode.png"
   ico03.src = "midia/sistem-mode.png"
 }else{
   button_add.src = "midia/add-light.png"
-  menu_mode.src = "midia/setting-mode-light.png"
+  button_color_mode.src = "midia/setting-mode-light.png"
   search.src = "midia/search-light.png"
   ico01.src = "midia/dark-mode-light.png"
   ico02.src = "midia/light-mode-light.png"
